@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding: 10px;
+            background-color: rgb(248, 248, 248)
+        }
+    </style>
+</head>
+
+
+<body>
+    <main>
+        <!-- start container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <textarea id="myJson" class="form-control" rows="4" col="300"></textarea>
+                    </div>
+                    <div class="col-lg-6"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <button type="button" class="btn-default" onclick="updatejson()">Update</button>
+                    <button type="button" class="btn-default" onclick="getJson()">Get</button>
+                    <button type="button" class="btn-default float-right" onclick="clearText()">Clear</button>
+                    <button type="button" class="btn-default float-right" onclick="clearText(true)">Hard Clear</button>
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
+        </div>
+        <!-- ENDOF container -->
+    </main>
+</body>
+<script>
+    function updatejson(callback) {
+        var jsonData = $('#myJson').val();
+        $.ajax({
+            url: "https://api.myjson.com/bins/hbcc0",
+            type: "PUT",
+            data: jsonData.toString(),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                this.callBack(data, true);
+            },
+
+            error: function (data) {
+                this.callBack(data, false);
+            },
+
+            callBack: function (data, status) {
+                if (typeof callback === 'function') {
+                    callback(data, status);
+                }
+            }
+        });
+    }
+
+    function getJson() {
+        var data;
+        $.ajax({
+            url: "https://api.myjson.com/bins/hbcc0",
+            type: "GET",
+            data: data,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                this.callBack(data, true);
+                $('#myJson').val(JSON.stringify(data));
+
+            },
+
+            error: function (data) {
+                this.callBack(data, false);
+            },
+
+            callBack: function (data, status) {
+                if (typeof callback === 'function') {
+                    callback(data, status);
+                }
+            }
+        });
+    }
+
+    function clearText(hardClear, callback) {
+        if (hardClear) {
+            $.ajax({
+                url: "https://api.myjson.com/bins/hbcc0",
+                type: "PUT",
+                data: '{}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    this.callBack(data, true);
+                },
+
+                error: function (data) {
+                    this.callBack(data, false);
+                },
+
+                callBack: function (data, status) {
+                    if (typeof callback === 'function') {
+                        callback(data, status);
+                    }
+                }
+            });
+        }
+
+        $('#myJson').val('');
+    }
+</script>
+
+</html>
