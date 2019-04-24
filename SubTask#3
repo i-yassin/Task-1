@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+
+body {
+  background-color: rgb(248,248,248);
+}
+
+header {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(151,184,163);
+  margin-right: 2vw;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: myFont;
+  color: rgb(89, 89, 89);
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(./fonts/almoni-neue-bold-aaa-otf/almoni-neue-bold-aaa-4.0-otf/almoni-neue-aaa-bold.otf);
+}
+
+.center img {
+  border-radius: 50%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  justify-content: center;
+  line-height:1;
+
+}
+
+.center .right .title {
+  text-transform:capitalize;
+
+}
+
+.center .right a {
+  color: rgb(151,184,163);
+  text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+
+}
+
+.row {
+  background-color: white;
+  width: 95%;
+  margin: 14px auto;
+  overflow: hidden;
+  text-transform: capitalize;
+  font-size: 2.4vh;
+}
+
+.row .right {
+  float: right;
+}
+
+.row .left {
+  float:left;
+}
+
+.clear {
+  clear: both;
+}
+
+.row img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.col-lg-3 {
+  text-align: center;
+ }
+
+.col-header {
+  background-color: white;
+  width: 95%;
+  margin: 14px auto;
+  clear: both;
+  text-transform: capitalize;
+  border-bottom: 1.5px rgb(89, 89, 89) dotted;
+}
+
+[class*=col-lg] {
+  max-width: 100%;
+  float: left;
+  padding:0 5px;
+}
+
+[class*=col-md] {
+  max-width: 100%;
+  padding:0 5px;
+}
+
+
+
+.col-lg-1 {width: 8.33%;}
+.col-lg-2 {width: 16.66%;}
+.col-lg-3 {width: 25%;}
+.col-lg-4 {width: 33.33%;}
+.col-lg-5 {width: 41.66%;}
+.col-lg-6 {width: 50%;}
+.col-lg-7 {width: 58.33%;}
+.col-lg-8 {width: 66.66%;}
+.col-lg-9 {width: 75%;}
+.col-lg-10 {width: 83.33%;}
+.col-lg-11 {width: 91.66%;}
+.col-lg-12 {width: 100%;}
+
+.descrelinetions p:nth-of-type(2) {
+  color: rgb(151,184,163);;
+}
+
+.color-green {
+  color: rgb(151,184,163);
+}
+
+.color-686868 {
+  color : rgb(68,68,68);
+}
+
+.alerts-border {
+  border: 1.5px transparent solid;
+  animation: blink 2s;
+  animation-iteration-count: infinite ;
+}
+
+@keyframes blink { 50% { border-color:green ; }  }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.topnav {
+  overflow: hidden;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .icon {
+  display: none;
+}
+.topnav a:not(:first-child) {
+	float:right;
+}
+
+.fa > * {
+  width: 28px;
+  height: 4px;
+  background-color: black;
+  margin: 3px 6px 0;
+}
+
+.font-sans-serif {
+  font-family: sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav a, .row .left{
+   font-size: 2vw;
+  }
+
+  .descreptions {
+    text-align: left;
+    margin-left: 50px;
+  }
+
+
+  .col-md-1 {width: 8.33%;}
+  .col-md-2 {width: 16.66%;}
+  .col-md-3 {width: 25%;}
+  .col-md-4 {width: 33.33%;}
+  .col-md-5 {width: 41.66%;}
+  .col-md-6 {width: 50%;}
+  .col-md-7 {width: 58.33%;}
+  .col-md-8 {width: 66.66%;}
+  .col-md-9 {width: 75%;}
+  .col-md-10 {width: 83.33%;}
+  .col-md-11 {width: 91.66%;}
+  .col-md-12 {width: 100%;}
+}
+
+@media (max-width: 767px) {
+  nav a, .row .left{
+   font-size: 25px;
+  }
+
+
+  .col-sm-1 {width: 8.33%;}
+  .col-sm-2 {width: 16.66%;}
+  .col-sm-3 {width: 25%;}
+  .col-sm-4 {width: 33.33%;}
+  .col-sm-5 {width: 41.66%;}
+  .col-sm-6 {width: 50%;}
+  .col-sm-7 {width: 58.33%;}
+  .col-sm-8 {width: 66.66%;}
+  .col-sm-9 {width: 75%;}
+  .col-sm-10 {width: 83.33%;}
+  .col-sm-11 {width: 91.66%;}
+  .col-sm-12 {width: 100%;}
+}
+
+@media screen and (min-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    padding: 10px;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media (min-width: 1024px)  {
+  .descreptions {
+    text-align: left;
+  }
+
+}
+
+
+</style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="center">
+            <img src="./assets/right_icon.PNG" alt="right_icon" width="50" height="50" class="alerts-border"
+                title="Right Side">
+            <div class="right">
+                <div class="title">right side</div>
+                <a href="#">Edit</a>
+            </div>
+        </div>
+    </header>
+    <!-- ENDOF header -->
+
+    <!-- main -->
+    <main>
+        <!-- section -->
+        <section>
+            <div class="row">
+                <div class="col-lg-12 col-header">
+                    <nav id="topnav1" class="topnav">
+                        <a href="#" class="color-686868">top treatment</a>
+                        <a href="#" class="color-686868">remove</a>
+                        <a href="#">add to wishlist</a>
+                        <a href="#">copy this item</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction(1)">
+                            <i class="fa fa-bars">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </i>
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-12">
+                        <img src="./assets/sample_1.PNG" alt="right_icon" title="Valance">
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <img src="./assets/window_1.PNG" alt="right_icon" title="Valance">
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="descreption">
+                        <p class="color686868">Valance</p>
+                        <p>Lux Line Honeycomb Shades | <a class="color-green">EDIT</a></p>
+                        <p class="font-sans-serif">#54321 natural Stone</p>
+                        <p class="font-sans-serif">50 1/2" W 60 15/32" H</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="col-lg-10">
+                        <p><span class="font-sans-serif">Mount</span> Inside Mount</p>
+                        <p><span class="font-sans-serif">headrail</span> No Tow On One Headrail</p>
+                        <p><span class="font-sans-serif">Left System</span> Motorization</p>
+                        <p><span class="font-sans-serif">motorization control</span> motiva wand</p>
+                        <a class="color-green">show more</a>
+                    </div>
+
+                    <div class="col-lg-2 col-md- col-sm-12">
+                        12121$
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ENDOF section -->
+
+        <!-- section -->
+        <section>
+            <div class="row">
+                <div class="col-lg-12 col-header">
+                    <nav id="topnav1" class="topnav">
+                        <a href="#" class="color-686868">top treatment</a>
+                        <a href="#" class="color-686868">remove</a>
+                        <a href="#">add to wishlist</a>
+                        <a href="#">copy this item</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction(1)">
+                            <i class="fa fa-bars">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </i>
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-12">
+                        <img src="./assets/sample_1.PNG" alt="right_icon" title="Valance">
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <img src="./assets/window_1.PNG" alt="right_icon" title="Valance">
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="descreption">
+                        <p class="color686868">Valance</p>
+                        <p>Lux Line Honeycomb Shades | <a class="color-green">EDIT</a></p>
+                        <p class="font-sans-serif">#54321 natural Stone</p>
+                        <p class="font-sans-serif">50 1/2" W 60 15/32" H</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="col-lg-10">
+                        <p><span class="font-sans-serif">Mount</span> Inside Mount</p>
+                        <p><span class="font-sans-serif">headrail</span> No Tow On One Headrail</p>
+                        <p><span class="font-sans-serif">Left System</span> Motorization</p>
+                        <p><span class="font-sans-serif">motorization control</span> motiva wand</p>
+                        <a class="color-green">show more</a>
+                    </div>
+
+                    <div class="col-lg-2 col-md- col-sm-12">
+                        12121$
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ENDOF section -->
+    </main>
+    <!-- ENDOF main -->
+
+</body>
+<script>
+    function myFunction(num) {
+        var x = document.getElementById("topnav" + num);
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</html>
