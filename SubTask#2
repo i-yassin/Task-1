@@ -1,0 +1,169 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "name": "bedroom",
+            "img_url": "x",
+            "products": [
+                {
+                    "id": "1",
+                    "name": "Valance",
+                    "stock": "12345",
+                    "stock_image": "",
+                    "width": "12.5",
+                    "height": "12.5",
+                    "mount": {
+                        "type": "Inside",
+                        "price": "370"
+                    },
+                    "extensionBrackets": {
+                        "type": "yes",
+                        "price": "310"
+                    },
+                    "Left_system": {
+                        "type": "standered lift",
+                        "price": "100"
+                    },
+                    "tilt_style": {
+                        "type": "card style",
+                        "price": "200"
+                    }
+                },
+                {
+                    "id": "2",
+                    "name": "Valance",
+                    "stock": "23456",
+                    "stock_image": "",
+                    "width": "22.5",
+                    "height": "22.5",
+                    "mount": {
+                        "type": "Inside",
+                        "price": "500"
+                    },
+                    "extensionBrackets": {
+                        "type": "yes",
+                        "price": "310"
+                    },
+                    "Left_system": {
+                        "type": "standered lift",
+                        "price": "150"
+                    },
+                    "tilt_style": {
+                        "type": "card style",
+                        "price": "400"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "living room",
+            "img_url": "x",
+            "products": [
+                {
+                    "id": "1",
+                    "name": "Valance",
+                    "stock": "55555",
+                    "stock_image": "",
+                    "width": "10.8",
+                    "height": "96.5",
+                    "mount": {
+                        "type": "Inside",
+                        "price": "370"
+                    },
+                    "extensionBrackets": {
+                        "type": "yes",
+                        "price": "310"
+                    },
+                    "Left_system": {
+                        "type": "standered lift",
+                        "price": "100"
+                    },
+                    "tilt_style": {
+                        "type": "card style",
+                        "price": "200"
+                    }
+                },
+                {
+                    "id": "2",
+                    "name": "Valance",
+                    "stock": "23456",
+                    "stock_image": "",
+                    "width": "56.5",
+                    "height": "77.5",
+                    "mount": {
+                        "type": "Inside",
+                        "price": "500"
+                    },
+                    "extensionBrackets": {
+                        "type": "yes",
+                        "price": "310"
+                    },
+                    "Left_system": {
+                        "type": "standered lift",
+                        "price": "150"
+                    },
+                    "tilt_style": {
+                        "type": "card style",
+                        "price": "400"
+                    }
+                },
+                {
+                    "id": "3",
+                    "name": "Valance",
+                    "stock": "22105",
+                    "stock_image": "",
+                    "width": "99.5",
+                    "height": "82.5",
+                    "mount": {
+                        "type": "Inside",
+                        "price": "500"
+                    },
+                    "extensionBrackets": {
+                        "type": "yes",
+                        "price": "310"
+                    },
+                    "Left_system": {
+                        "type": "standered lift",
+                        "price": "150"
+                    },
+                    "tilt_style": {
+                        "type": "card style",
+                        "price": "400"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "formal dining room",
+            "img_url": "x",
+            "products": [
+                {
+                    "id": "1",
+                    "name": "Valance",
+                    "stock": "98752",
+                    "stock_image": "",
+                    "width": "56.7",
+                    "height": "8.23",
+                    "mount": {
+                        "type": "Inside",
+                        "price": "370"
+                    },
+                    "extensionBrackets": {
+                        "type": "yes",
+                        "price": "310"
+                    },
+                    "Left_system": {
+                        "type": "standered lift",
+                        "price": "100"
+                    },
+                    "tilt_style": {
+                        "type": "card style",
+                        "price": "200"
+                    }
+                }
+            ]
+        }
+    ]
+}
